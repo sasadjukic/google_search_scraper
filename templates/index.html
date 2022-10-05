@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for ('static', filename='css/styles.css') }}">
+    <title>Google Webscraper</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <!-- SocketIO script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js" integrity="sha512-q/dWJ3kcmjBLU4Qc47E4A9kTB4m3wuTY7vkFJDTZKjTs8jhyGQnaUrxa0Ytd0ssMZhbNua9hE+E7Qv1j+DyZwA==" crossorigin="anonymous" defer></script>
+    <!-- custom JS -->
+    <script src="{{ url_for ('static', filename='scripts/main_page.js')}}" defer></script>
+    <script src="{{ url_for('static', filename='scripts/main.js') }}"></script>
+</head>
+<body>
+
+    <!-- Logo made from image https://www.onlygfx.com/magnifying-glass-clipart-png-transparent/ -->
+    <!-- App logo -->
+    <div>
+        <form action="{{ url_for('home') }}">
+            <button type="submit" class="btn-container">
+                <img src="{{ url_for('static', filename='images/google_search_logo.png') }}" alt="searching_google_logo" />
+            </button>
+        </form>
+        
+    </div>
+
+    <!-- App search bar -->
+    <div id="search_bar">
+        <input type="text" id="search" placeholder="enter keywords to scrape Google search" aria-label="search" />
+        <button type="button" id="perform_search" aria-label="submit search">
+            <img src="{{ url_for('static', filename='images/search_icon.png') }}" alt="search" width="25" height="25">
+        </button>
+    </div>
+
+    <!-- We'll populate this div with JS information after it receives data from server-->
+    <div>
+        <table id="display_results">
+            
+        </table>
+    </div>
+    
+</body>
+</html>
