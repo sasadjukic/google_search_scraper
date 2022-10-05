@@ -31,4 +31,5 @@ The data is transfered from BE to FE via Flask-socketIO
 1. This program allows you to modify how many pages you want to search (line 27 in run.py)
 2. You can modify the timer of the for loop to slower the scraper to potentially avoid Google ban (line 40 in run.py)
 
+<strong>SCREENSHOTS</strong>
 
