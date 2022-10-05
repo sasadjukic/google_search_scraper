@@ -9,7 +9,8 @@ Logo for this program is made with much help fom this image https://www.onlygfx.
 
 <strong>ABOUT THIS PROGRAM</strong>
 <br><br>
-Google Search Scraper is a simple program that scrapes google search engine and writes a csv file with all the data 
+Google Search Scraper is a simple program that scrapes google search engine and writes a csv file with all the data.
+The data collected are the title and associated web site that appear on the Google search engine as a result of the user's search.
 The program uses Python/Flask for backend, and HTML, CSS, vanilla JS for front end. BeautifulSoup is used to scrape data from Google.
 The data is transfered from BE to FE via Flask-socketIO
 
@@ -32,4 +33,6 @@ The data is transfered from BE to FE via Flask-socketIO
 2. You can modify the timer of the for loop to slower the scraper to potentially avoid Google ban (line 40 in run.py)
 
 <strong>SCREENSHOTS</strong>
-
+<img src="./assets/scraper_1.png" />
+<img src="./assets/scraper_2.png" />
+<img src="./assets/scraper_3.png" />
